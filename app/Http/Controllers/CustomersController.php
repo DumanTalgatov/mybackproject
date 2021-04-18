@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CustomersModels;
-use App\Models\ShoppersModels;
 
 class CustomersController extends Controller
 {
@@ -21,13 +20,6 @@ class CustomersController extends Controller
         $customers_models->password=$request->password;
         
         $customers_models->save();
-
-        $shoppers_models = new ShoppersModels();
-        $shoppers_models->email=$request->email;
-        $shoppers_models->password=$request->password;
-
-        $shoppers_models->save();
-        
         return redirect()->route('auth');
     }
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -198,14 +197,12 @@
    <script src="js/hMenu.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script>
-
       $(function() {
          $(document).scroll(function() {
          let $nav = $(".header");
          $nav.toggleClass('header-scrolled', $(this).scrollTop() > $nav.height());
          });
       });
-
       const tabs = document.querySelectorAll('.tab')
       const blocks = document.querySelectorAll('.sign-form')
       
@@ -217,12 +214,10 @@
             
             tabs.forEach(tab => tab.classList.remove('active-btn'))
             blocks.forEach(block => block.classList.remove('sign-form_active'))
-
             currentTab.classList.add('active-btn')
             currentBlock.classList.add('sign-form_active')
          });
       });
-
    </script>
 </body>
 </html>
